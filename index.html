@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter application.">
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="githubpage">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
-  <title>githubpage</title>
-  <link rel="manifest" href="manifest.json">
+
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="A new Flutter application.">
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="githubpage">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+    <title>githubpage</title>
+    <link rel="manifest" href="manifest.json">
+
+  <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-storage.js"></script>
+
+  <script defer src="main.dart.js" type="application/javascript"></script>
 </head>
 <body>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
-  <script>
+<!-- This script installs service_worker.js to provide PWA functionality to
+     application. For more information, see:
+     https://developers.google.com/web/fundamentals/primers/service-workers -->
+<script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
         navigator.serviceWorker.register('flutter_service_worker.js');
       });
     }
-  </script>
-  <script src="main.dart.js" type="application/javascript"></script>
+</script>
+
+<script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBzFReZUWvy_nQVi7kEuR6aCpIESPR26E4",
+      authDomain: "flutter-demo-a321.firebaseapp.com",
+      databaseURL: "https://flutter-demo-a321.firebaseio.com",
+      projectId: "flutter-demo-a321",
+      storageBucket: "flutter-demo-a321.appspot.com",
+      messagingSenderId: "832217009155",
+      appId: "1:832217009155:web:53ed2011e7fd7cd647d236",
+      measurementId: "G-3M6F0QNWMX"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
+
+
 </body>
 </html>
